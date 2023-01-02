@@ -3,4 +3,4 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/KrikSofw/Krik-s-Hub/m
 H-String
 loadstring(game:HttpGet('https://raw.githubusercontent.com/KrikSofw/Krik-s-Hub/main/H'))()
 Make String
-loadstring(game:HttpGet('https://https://raw.githubusercontent.com/KrikSofw/Krik-s-Hub/main/m'))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/KrikSofw/Krik-s-Hub/main/m'))()
