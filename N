@@ -1,0 +1,786 @@
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
+--Values
+getgenv().AutoSwing = true
+getgenv().AutoSell = true
+getgenv().Skillstp = true
+getgenv().Shoptp = true
+getgenv().AutoFarm = true
+getgenv().BestSword = true
+getgenv().BestBelt = true
+getgenv().Jump = true
+getgenv().Rankup = true
+--Window
+local Window = Rayfield:CreateWindow({
+    Name = "⚡Ninja Legends Fucker By Krik#9388",
+    LoadingTitle = "Rayfield Interface Suite",
+    LoadingSubtitle = "by Sirius",
+    ConfigurationSaving = {
+       Enabled = true,
+       FolderName = nil, -- Create a custom folder for your hub/game
+       FileName = "Big Hub"
+    },
+    Discord = {
+       Enabled = false,
+       Invite = "sirius", -- The Discord invite code, do not include discord.gg/
+       RememberJoins = false -- Set this to false to make them join the discord every time they load it up
+    },
+    KeySystem = true, -- Set this to true to use our key system
+    KeySettings = {
+       Title = "Sirius Hub",
+       Subtitle = "Key System",
+       Note = "Join the discord (discord.gg/sirius)",
+       FileName = "SiriusKey",
+       SaveKey = false,
+       GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+       Key = ""
+    }
+ })
+ --Tab
+ local Tab = Window:CreateTab("Main") -- Title, Image
+ --Section
+ local Section = Tab:CreateSection("Rank")
+ local Toggle = Tab:CreateToggle({
+   Name = "Auto Rankup",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   Rankup = Value
+   while Rankup == true do
+      
+
+      local args = {
+         [1] = "buyRank",
+         [2] = "Apprentice"
+     }
+     
+     game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))
+     
+
+     local args = {
+      [1] = "buyRank",
+      [2] = "Assassin"
+  }
+  
+  game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))
+  
+  local args = {
+   [1] = "buyRank",
+   [2] = "Master Sensei"
+}
+
+game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))
+wait(.1)
+local args = {
+   [1] = "buyRank",
+   [2] = "Ninja Legend"
+}
+
+game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))
+wait(.1)
+local args = {
+   [1] = "buyRank",
+   [2] = "Rookie"
+}
+
+game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))
+wait(.1)
+local args = {
+   [1] = "buyRank",
+   [2] = "Samurai"
+}
+
+game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))
+wait(.1)
+local args = {
+   [1] = "buyRank",
+   [2] = "Sensei"
+}
+
+game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))
+wait(.1)
+local args = {
+   [1] = "buyRank",
+   [2] = "Shadow"
+}
+
+game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))
+wait(.1)
+local args = {
+   [1] = "buyRank",
+   [2] = "Master Of Shadows"
+}
+
+game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))
+wait(.1)
+local args = {
+   [1] = "buyRank",
+   [2] = "Immortal Assassin"
+}
+
+game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))
+wait(.1)
+local args = {
+   [1] = "buyRank",
+   [2] = "Eternity Hunter"
+}
+
+game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))
+wait(.1)
+local args = {
+   [1] = "buyRank",
+   [2] = "Shadow Legend"
+}
+
+game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))
+wait(.1)
+
+local args = {
+   [1] = "buyRank",
+   [2] = "Dragon Warrior"
+}
+
+game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))
+wait(.1)
+
+local args = {
+   [1] = "buyRank",
+   [2] = "Dragon Master"
+}
+
+game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))
+wait(.1)
+
+local args = {
+   [1] = "buyRank",
+   [2] = "Chaos Sensei"
+}
+
+game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))
+wait(.1)
+
+local args = {
+   [1] = "buyRank",
+   [2] = "Chaos Legend"
+}
+
+game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))
+wait(.1)
+
+local args = {
+   [1] = "buyRank",
+   [2] = "Master Of Elements"
+}
+
+game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))
+wait(.1)
+
+local args = {
+   [1] = "buyRank",
+   [2] = "Elemental Legend"
+}
+
+game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))
+wait(.1)
+
+local args = {
+   [1] = "buyRank",
+   [2] = "Ancient Battle Master"
+}
+
+game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))
+wait(.1)
+
+local args = {
+   [1] = "buyRank",
+   [2] = "Legendary Shadow Duelist"
+}
+
+game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))
+
+local args = {
+   [1] = "buyRank",
+   [2] = "Master Legend Assassin"
+}
+
+game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))
+wait(.1)
+local args = {
+   [1] = "buyRank",
+   [2] = "Mythic Shadowmaster"
+}
+
+game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))
+wait(.1)
+local args = {
+   [1] = "buyRank",
+   [2] = "Legendary Shadowmaster"
+}
+
+game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))
+wait(.1)
+local args = {
+   [1] = "buyRank",
+   [2] = "Awakened Scythemaster"
+}
+
+game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))
+wait(.1)
+
+local args = {
+   [1] = "buyRank",
+   [2] = "Awakened Scythe Legend"
+}
+
+game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))
+wait(.1)
+
+
+local args = {
+   [1] = "buyRank",
+   [2] = "Master Legend Zephyr"
+}
+
+game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))
+wait(.1)
+
+
+local args = {
+   [1] = "buyRank",
+   [2] = "Golden Sun Shuriken Master"
+}
+
+game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))
+wait(.1)
+local args = {
+   [1] = "buyRank",
+   [2] = "Golden Sun Shuriken Legend"
+}
+
+game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))
+wait(.1)
+local args = {
+   [1] = "buyRank",
+   [2] = "Dark Sun Samurai Legend"
+}
+
+game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))
+wait(.1)
+
+local args = {
+   [1] = "buyRank",
+   [2] = "Dragon Evolution Form I"
+}
+
+game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))
+wait(.1)
+
+
+local args = {
+   [1] = "buyRank",
+   [2] = "Dragon Evolution Form II"
+}
+
+game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))
+wait(.1)
+
+
+local args = {
+   [1] = "buyRank",
+   [2] = "Dragon Evolution Form III"
+}
+
+game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))
+wait(.1)
+
+
+local args = {
+   [1] = "buyRank",
+   [2] = "Dragon Evolution Form IV"
+}
+
+game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))
+wait(.1)
+
+
+local args = {
+   [1] = "buyRank",
+   [2] = "Dragon Evolution Form V"
+}
+
+game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))
+wait(.1)
+
+
+local args = {
+   [1] = "buyRank",
+   [2] = "Cybernetic Electro Master"
+}
+
+game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))
+wait(.1)
+
+
+local args = {
+   [1] = "buyRank",
+   [2] = "Cybernetic Electro Legend"
+}
+
+game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))
+wait(.1)
+
+
+local args = {
+   [1] = "buyRank",
+   [2] = "Shadow Chaos Assassin"
+}
+
+game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))
+wait(.1)
+
+
+local args = {
+   [1] = "buyRank",
+   [2] = "Shadow Chaos Legend"
+}
+
+game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))
+wait(.1)
+
+
+local args = {
+   [1] = "buyRank",
+   [2] = "Infinity Sensei"
+}
+
+game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))
+wait(.1)
+
+
+local args = {
+   [1] = "buyRank",
+   [2] = "Infinity Legend"
+}
+
+game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))
+wait(.1)
+
+
+local args = {
+   [1] = "buyRank",
+   [2] = "Aether Genesis Master Ninja"
+}
+
+game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))
+wait(.1)
+
+
+local args = {
+   [1] = "buyRank",
+   [2] = "Master Legend Sensei Hunter"
+}
+
+game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))
+wait(.1)
+
+
+local args = {
+   [1] = "buyRank",
+   [2] = "Skystorm Series Samurai Legend"
+}
+
+game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))
+wait(.1)
+
+
+
+local args = {
+   [1] = "buyRank",
+   [2] = "Master Elemental Hero"
+}
+
+game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))
+wait(.1)
+
+
+
+local args = {
+   [1] = "buyRank",
+   [2] = "Eclipse Series Soul Master"
+}
+
+game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))
+wait(.1)
+
+
+
+local args = {
+   [1] = "buyRank",
+   [2] = "Starstrike Master Sensei"
+}
+
+game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))
+wait(.1)
+
+
+local args = {
+   [1] = "buyRank",
+   [2] = "Evolved Series Master Ninja"
+}
+
+game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))
+wait(.1)
+
+local args = {
+   [1] = "buyRank",
+   [2] = "Dark Elements Guardian"
+}
+
+game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))
+wait(.1)
+local args = {
+   [1] = "buyRank",
+   [2] = "Elite Series Master Legend"
+}
+
+game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))
+wait(.1)
+local args = {
+   [1] = "buyRank",
+   [2] = "Infinity Shadows Master"
+}
+
+game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))
+wait(.1)
+local args = {
+   [1] = "buyRank",
+   [2] = "Lightning Storm Sensei"
+}
+
+game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))
+wait(.1)
+local args = {
+   [1] = "buyRank",
+   [2] = "Dark Elements Blademaster"
+}
+
+game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))
+wait(.1)
+local args = {
+   [1] = "buyRank",
+   [2] = "Rising Shadow Eternal Ninja"
+}
+
+game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))
+wait(.1)
+local args = {
+   [1] = "buyRank",
+   [2] = "Skyblade Ninja Master"
+}
+
+game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))
+wait(.1)
+local args = {
+   [1] = "buyRank",
+   [2] = "Shadow Storm Sensei"
+}
+
+game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))
+wait(.1)
+local args = {
+   [1] = "buyRank",
+   [2] = "Comet Strike Lion"
+}
+wait(.1)
+game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))
+
+local args = {
+   [1] = "buyRank",
+   [2] = "Cybernetic Azure Sensei"
+}
+
+game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))
+wait(.1)
+local args = {
+   [1] = "buyRank",
+   [2] = "Ultra Genesis Shadow"
+}
+game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))
+wait(.1)
+local args = {
+   [1] = "buyRank",
+   [2] = "Ninja"
+}
+game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))
+wait(.1)
+local args = {
+   [1] = "buyRank",
+   [2] = "Master Ninja"
+}
+game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))
+wait()
+   end
+   end,
+})
+
+
+ local Section = Tab:CreateSection("Player Stuff")
+--toggle
+
+local Toggle = Tab:CreateToggle({
+    Name = "Auto-Swing",
+    CurrentValue = false,
+    Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+    AutoSwing = Value
+    while AutoSwing == true do
+        local args = {
+            [1] = "swingKatana"
+        }
+        
+        game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))
+        wait()    
+    end
+    end,
+ })
+ local Toggle = Tab:CreateToggle({
+    Name = "Auto-Sell",
+    CurrentValue = false,
+    Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+    AutoSell = Value
+    while AutoSell == true do
+        game.Players.LocalPlayer.Character.Humanoid.Jump = true
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(76, 91246, 126)
+        wait()
+        
+    end
+    end,
+ })
+ 
+ local Toggle = Tab:CreateToggle({
+   Name = "AutoFarm Hoops",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   AutoFarm = Value
+   while AutoFarm == true do
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-86, 163, 308)
+      wait(.2)
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(132, 274, 333)
+      wait(.2)
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-13, 373, 91)
+      wait(.2)
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(322, 219, -94)
+      wait(.2)
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(70, 181, -243)
+      wait(.2)
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(258, 407, 268)
+      wait(.2)
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-12, 376, 88)
+      wait(.2)
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(141, 615, 94)
+      wait(.2)
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(326, 695, -0)
+      wait(.2)
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(121, 1024, -75)
+      wait(.2)
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(345, 2053, 47)
+      
+
+   end
+   end,
+})
+
+local Section = Tab:CreateSection("Swords & Belts")
+
+local Toggle = Tab:CreateToggle({
+   Name = "Auto Buy Best Sword",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   BestSword = Value
+   while BestSword == true do
+      
+      local args = {
+         [1] = "buyAllSwords",
+         [2] = "Blazing Vortex Island"
+     }
+     
+     game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))
+     wait()
+
+
+   end
+   end,
+})
+
+local Toggle = Tab:CreateToggle({
+   Name = "Auto Buy Best Belt",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   BestBelt = Value
+   while BestBelt == true do
+      
+      local args = {
+         [1] = "buyAllBelts",
+         [2] = "Blazing Vortex Island"                
+     }
+     
+     game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))
+     wait()
+
+   end
+   end,
+})
+
+--Section
+local Section = Tab:CreateSection("Panic")
+local Button = Tab:CreateButton({
+    Name = "Kill Gui",
+    Callback = function()
+    kill()
+    end,
+ })
+
+
+
+--Notfiy
+Rayfield:Notify({
+    Title = "Script Status",
+    Content = "Private",
+    Duration = 6.5,
+    Image = 4483362458,
+    Actions = { -- Notification Buttons
+       Ignore = {
+          Name = "Okay!",
+          Callback = function()
+          print("The user tapped Okay!")
+       end
+    },
+ },
+ })
+
+ 
+ function skills()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(88, 4, 102)
+ end
+
+ function shop()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(125, 5, 29)
+ end
+
+ function kill ()
+    Rayfield:Destroy()
+ end
+
+--Tab
+local Tab = Window:CreateTab("Islands") -- Title, Image
+--Section
+local Section = Tab:CreateSection("Island Stuff")
+local Button = Tab:CreateButton({
+   Name = "Unlock ALL",
+   Callback = function()
+  UnlockAll()
+   end,
+})
+local Section = Tab:CreateSection("Chests")
+local Button = Tab:CreateButton({
+   Name = "Claim All",
+   Callback = function()
+   chest()
+   end,
+})
+
+
+
+--Section
+local Section = Tab:CreateSection("Teleports")
+--DropDown
+local Dropdown = Tab:CreateDropdown({
+   Name = "Teleports",
+   Options = {"Shop","Skills"},
+   CurrentOption = "None",
+   Flag = "Dropdown1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Option)
+      if Option == "Shop" then
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(127, 3, 32)
+      elseif Option == "Skills" then
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(86, 3, 105)
+   end  
+   end,
+})
+
+
+
+
+
+function UnlockAll()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(51.2420082, 849.832031, -151.813995, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+       wait(.7) --Enchanted Island
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(216.321625, 2095.47778, 256.276184, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+       wait(.4) --AstralIsland
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(145.131607, 24157.2402, 90.3484344, 0.342042685, -0, -0.939684391, 0, 1, -0, 0.939684391, 0, 0.342042685)
+       wait(.4) --ThunderStrom
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(144.021057, 91354.4844, 88.9619141, 0.342042685, -0, -0.939684391, 0, 1, -0, 0.939684391, 0, 0.342042685)
+       wait(.4)--Blazing Vortex
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(144.021057, 28364.6953, 88.9619141, 0.342042685, -0, -0.939684391, 0, 1, -0, 0.939684391, 0, 0.342042685)
+       wait(.4) --Ancient Inferno Island
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(144.021057, 33315.3867, 88.9619141, 0.342042685, -0, -0.939684391, 0, 1, -0, 0.939684391, 0, 0.342042685)
+       wait(.4) --Midnight Shadow Island
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(144.021057, 39425.9766, 88.9619141, 0.342042685, -0, -0.939684391, 0, 1, -0, 0.939684391, 0, 0.342042685)
+       wait(.5) --Mythical Souls Island
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(144.021057, 46118.9609, 88.9619141, 0.342042685, -0, -0.939684391, 0, 1, -0, 0.939684391, 0, 0.342042685)
+       wait(.4) --WinterWonder Land
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(144.021057, 52716.168, 88.9619141, 0.342042685, -0, -0.939684391, 0, 1, -0, 0.939684391, 0, 0.342042685)
+       wait(.4) --Golden Master Island
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(144.021057, 59703.0859, 88.9619141, 0.342042685, -0, -0.939684391, 0, 1, -0, 0.939684391, 0, 0.342042685)
+       wait(.4) --Dragon Legend Island
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(144.021057, 66777.5781, 88.9619141, 0.342042685, -0, -0.939684391, 0, 1, -0, 0.939684391, 0, 0.342042685)
+       wait(.5) --CyberNetic Legend Island
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(144.021057, 70379.5703, 88.9619141, 0.342042685, -0, -0.939684391, 0, 1, -0, 0.939684391, 0, 0.342042685)
+       wait(.4) --Skystrom Ultras
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(144.021057, 74551.2656, 88.9619141, 0.342042685, -0, -0.939684391, 0, 1, -0, 0.939684391, 0, 0.342042685)
+       wait(.4) --Choas island
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(144.021057, 79855.3984, 88.9619141, 0.342042685, -0, -0.939684391, 0, 1, -0, 0.939684391, 0, 0.342042685)
+       wait(.4) --Soul Fusion Island
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(144.021057, 83307.3984, 88.9619141, 0.342042685, -0, -0.939684391, 0, 1, -0, 0.939684391, 0, 0.342042685)
+       wait(.5) --Dark Elements Island
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(144.021057, 87159.4844, 88.9619141, 0.342042685, -0, -0.939684391, 0, 1, -0, 0.939684391, 0, 0.342042685)
+       wait(.4) --Inner peace island
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(144.021057, 91354.4844, 88.9619141, 0.342042685, -0, -0.939684391, 0, 1, -0, 0.939684391, 0, 0.342042685)
+       wait(.4) --Blazing Vortex Island
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(145.131607, 9372.39746, 90.3484344, 0.342042685, -0, -0.939684391, 0, 1, -0, 0.939684391, 0, 0.342042685)
+       wait(.5) --Trunda
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(145.131607, 17773.5469, 90.3484344, 0.342042685, -0, -0.939684391, 0, 1, -0, 0.939684391, 0, 0.342042685)
+       wait(.4) --SandStrom
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(145.131607, 13767.251, 90.3484344, 0.342042685, -0, -0.939684391, 0, 1, -0, 0.939684391, 0, 0.342042685)
+       wait(.4) --Enternel Island
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(138.522156, 5847.19336, 123.56015, 0.573598742, -0, -0.81913656, 0, 1, -0, 0.81913656, 0, 0.573598742)
+       wait(.7) --Space Island
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(184.796295, 4124.17773, 45.8520508, 0.499959469, 0, 0.866048813, 0, 1, 0, -0.866048813, 0, 0.499959469)
+       wait(.4) --Mystical Island
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-0.346358001, 0.898000002, 70.1584854, 0.258864343, -0, -0.965913713, 0, 1, -0, 0.965913713, 0, 0.258864343) --spawn
+
+end    
+
+function chest ()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(46, 773, -187)
+wait(.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(210, 4054, 61)
+wait(.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(39, 5663, 60)
+wait(.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(40, 9291, 58)
+wait(.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(37, 17693, 60)
+wait(.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(37, 28263, 50)
+wait(.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(40, 24076, 58)
+wait(.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(39, 13686, 58)
+wait(.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-0.346358001, 0.898000002, 70.1584854, 0.258864343, -0, -0.965913713, 0, 1, -0, 0.965913713, 0, 0.258864343)
+end
+
