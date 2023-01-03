@@ -9,11 +9,15 @@ getgenv().BestSword = true
 getgenv().BestBelt = true
 getgenv().Jump = true
 getgenv().Rankup = true
+getgenv().BossFarm = true
+getgenv().Chii = true
+
+
 --Window
 local Window = Rayfield:CreateWindow({
     Name = "⚡Ninja Legends Fucker By Krik#9388",
-    LoadingTitle = "Rayfield Interface Suite",
-    LoadingSubtitle = "by Sirius",
+    LoadingTitle = "Krik's ⚡Ninja Legends Fucker",
+    LoadingSubtitle = "by Krik#9388",
     ConfigurationSaving = {
        Enabled = true,
        FolderName = nil, -- Create a custom folder for your hub/game
@@ -26,9 +30,9 @@ local Window = Rayfield:CreateWindow({
     },
     KeySystem = true, -- Set this to true to use our key system
     KeySettings = {
-       Title = "Sirius Hub",
-       Subtitle = "Key System",
-       Note = "Join the discord (discord.gg/sirius)",
+       Title = "Krik's Game Fucker",
+       Subtitle = "The Key Is Nothing hit enter",
+       Note = "Private Script :)",
        FileName = "SiriusKey",
        SaveKey = false,
        GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
@@ -633,6 +637,19 @@ local Toggle = Tab:CreateToggle({
    end
    end,
 })
+local Section = Tab:CreateSection("Skills & Shurikens")
+local Button = Tab:CreateButton({
+   Name = "Auto Buy All Skills",
+   Callback = function()
+   skillsbuy()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Auto Buy All Shurikens",
+   Callback = function()
+   shurkianbuy()
+   end,
+})
 
 --Section
 local Section = Tab:CreateSection("Panic")
@@ -643,24 +660,7 @@ local Button = Tab:CreateButton({
     end,
  })
 
-
-
---Notfiy
-Rayfield:Notify({
-    Title = "Script Status",
-    Content = "Private",
-    Duration = 6.5,
-    Image = 4483362458,
-    Actions = { -- Notification Buttons
-       Ignore = {
-          Name = "Okay!",
-          Callback = function()
-          print("The user tapped Okay!")
-       end
-    },
- },
- })
-
+ 
  
  function skills()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(88, 4, 102)
@@ -699,14 +699,54 @@ local Section = Tab:CreateSection("Teleports")
 --DropDown
 local Dropdown = Tab:CreateDropdown({
    Name = "Teleports",
-   Options = {"Shop","Skills"},
+   Options = {"Spawn","Enchanted Island","Astral Island","Mystical Island","Space Island","Tundra Island","Externel Island","SandStorm Island","AncientInferno Island", "ThunderStrom Island", "AncientInferno Island", "MidnightShadow Island", "MythicalSouls Island", "WinterWonder Island", "GoldenMaster Island", "DragonLegend Island", "Cybermetic Legends Island", "SkyStorm Ultraus Island", "ChaosLegends Island", "SoulFusion Island", "DarkElements Island", "InnerPeace Island", "BlazingVortex Island"},
    CurrentOption = "None",
    Flag = "Dropdown1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(Option)
-      if Option == "Shop" then
-         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(127, 3, 32)
-      elseif Option == "Skills" then
-      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(86, 3, 105)
+      if Option == "Enchanted Island" then
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(51.2420082, 849.832031, -151.813995, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+      elseif Option == "Astral Island" then
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(216.321625, 2095.47778, 256.276184, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+      elseif Option == "Mystical Island" then
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(184.796295, 4124.17773, 45.8520508, 0.499959469, 0, 0.866048813, 0, 1, 0, -0.866048813, 0, 0.499959469)
+      elseif Option == "Spawn" then
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(21, 3, 30)
+      elseif Option == "Space Island" then
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(138.522156, 5847.19336, 123.56015, 0.573598742, -0, -0.81913656, 0, 1, -0, 0.81913656, 0, 0.573598742)
+      elseif Option == "Tundra Island" then
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(145.131607, 9372.39746, 90.3484344, 0.342042685, -0, -0.939684391, 0, 1, -0, 0.939684391, 0, 0.342042685)
+      elseif "SandStorm Island" == Option then
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(145.131607, 17773.5469, 90.3484344, 0.342042685, -0, -0.939684391, 0, 1, -0, 0.939684391, 0, 0.342042685)
+      elseif "Externel Island" == Option then
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(145.131607, 13767.251, 90.3484344, 0.342042685, -0, -0.939684391, 0, 1, -0, 0.939684391, 0, 0.342042685)
+      elseif "AncientInferno Island" == Option then
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(144.021057, 28364.6953, 88.9619141, 0.342042685, -0, -0.939684391, 0, 1, -0, 0.939684391, 0, 0.342042685)
+      elseif "ThunderStrom Island" == Option then 
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(145.131607, 24157.2402, 90.3484344, 0.342042685, -0, -0.939684391, 0, 1, -0, 0.939684391, 0, 0.342042685)
+      elseif "MidnightShadow Island" == Option then
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(144.021057, 33315.3867, 88.9619141, 0.342042685, -0, -0.939684391, 0, 1, -0, 0.939684391, 0, 0.342042685)
+      elseif "MythicalSouls Island" == Option then
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(144.021057, 39425.9766, 88.9619141, 0.342042685, -0, -0.939684391, 0, 1, -0, 0.939684391, 0, 0.342042685)
+      elseif "WinterWonder Island" == Option then 
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(144.021057, 46118.9609, 88.9619141, 0.342042685, -0, -0.939684391, 0, 1, -0, 0.939684391, 0, 0.342042685)
+      elseif "GoldenMaster Island" == Option then 
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(144.021057, 52716.168, 88.9619141, 0.342042685, -0, -0.939684391, 0, 1, -0, 0.939684391, 0, 0.342042685)
+      elseif "DragonLegend Island" == Option then 
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(144.021057, 59703.0859, 88.9619141, 0.342042685, -0, -0.939684391, 0, 1, -0, 0.939684391, 0, 0.342042685)
+      elseif "Cybermetic Legends Island" == Option then 
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(144.021057, 66777.5781, 88.9619141, 0.342042685, -0, -0.939684391, 0, 1, -0, 0.939684391, 0, 0.342042685)
+      elseif "SkyStorm Ultraus Island" == Option then 
+         game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(144.021057, 70379.5703, 88.9619141, 0.342042685, -0, -0.939684391, 0, 1, -0, 0.939684391, 0, 0.342042685)
+      elseif "ChaosLegends Island" == Option then 
+         game.Players.localPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(144.021057, 74551.2656, 88.9619141, 0.342042685, -0, -0.939684391, 0, 1, -0, 0.939684391, 0, 0.342042685)
+      elseif "SoulFusion Island" == Option then 
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(144.021057, 79855.3984, 88.9619141, 0.342042685, -0, -0.939684391, 0, 1, -0, 0.939684391, 0, 0.342042685)
+      elseif "DarkElements Island" == Option then 
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(144.021057, 83307.3984, 88.9619141, 0.342042685, -0, -0.939684391, 0, 1, -0, 0.939684391, 0, 0.342042685)
+      elseif "InnerPeace Island" == Option then 
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(144.021057, 87159.4844, 88.9619141, 0.342042685, -0, -0.939684391, 0, 1, -0, 0.939684391, 0, 0.342042685)
+      elseif "BlazingVortex Island" == Option then 
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(144.021057, 91354.4844, 88.9619141, 0.342042685, -0, -0.939684391, 0, 1, -0, 0.939684391, 0, 0.342042685)
    end  
    end,
 })
@@ -716,71 +756,127 @@ local Dropdown = Tab:CreateDropdown({
 
 
 function UnlockAll()
-   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(51.2420082, 849.832031, -151.813995, -1, 0, 0, 0, 1, 0, 0, 0, -1)
-       wait(.7) --Enchanted Island
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(216.321625, 2095.47778, 256.276184, -1, 0, 0, 0, 1, 0, 0, 0, -1)
-       wait(.4) --AstralIsland
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(145.131607, 24157.2402, 90.3484344, 0.342042685, -0, -0.939684391, 0, 1, -0, 0.939684391, 0, 0.342042685)
-       wait(.4) --ThunderStrom
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(144.021057, 91354.4844, 88.9619141, 0.342042685, -0, -0.939684391, 0, 1, -0, 0.939684391, 0, 0.342042685)
-       wait(.4)--Blazing Vortex
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(144.021057, 28364.6953, 88.9619141, 0.342042685, -0, -0.939684391, 0, 1, -0, 0.939684391, 0, 0.342042685)
-       wait(.4) --Ancient Inferno Island
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(144.021057, 33315.3867, 88.9619141, 0.342042685, -0, -0.939684391, 0, 1, -0, 0.939684391, 0, 0.342042685)
-       wait(.4) --Midnight Shadow Island
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(144.021057, 39425.9766, 88.9619141, 0.342042685, -0, -0.939684391, 0, 1, -0, 0.939684391, 0, 0.342042685)
-       wait(.5) --Mythical Souls Island
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(144.021057, 46118.9609, 88.9619141, 0.342042685, -0, -0.939684391, 0, 1, -0, 0.939684391, 0, 0.342042685)
-       wait(.4) --WinterWonder Land
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(144.021057, 52716.168, 88.9619141, 0.342042685, -0, -0.939684391, 0, 1, -0, 0.939684391, 0, 0.342042685)
-       wait(.4) --Golden Master Island
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(144.021057, 59703.0859, 88.9619141, 0.342042685, -0, -0.939684391, 0, 1, -0, 0.939684391, 0, 0.342042685)
-       wait(.4) --Dragon Legend Island
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(144.021057, 66777.5781, 88.9619141, 0.342042685, -0, -0.939684391, 0, 1, -0, 0.939684391, 0, 0.342042685)
-       wait(.5) --CyberNetic Legend Island
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(144.021057, 70379.5703, 88.9619141, 0.342042685, -0, -0.939684391, 0, 1, -0, 0.939684391, 0, 0.342042685)
-       wait(.4) --Skystrom Ultras
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(144.021057, 74551.2656, 88.9619141, 0.342042685, -0, -0.939684391, 0, 1, -0, 0.939684391, 0, 0.342042685)
-       wait(.4) --Choas island
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(144.021057, 79855.3984, 88.9619141, 0.342042685, -0, -0.939684391, 0, 1, -0, 0.939684391, 0, 0.342042685)
-       wait(.4) --Soul Fusion Island
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(144.021057, 83307.3984, 88.9619141, 0.342042685, -0, -0.939684391, 0, 1, -0, 0.939684391, 0, 0.342042685)
-       wait(.5) --Dark Elements Island
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(144.021057, 87159.4844, 88.9619141, 0.342042685, -0, -0.939684391, 0, 1, -0, 0.939684391, 0, 0.342042685)
-       wait(.4) --Inner peace island
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(144.021057, 91354.4844, 88.9619141, 0.342042685, -0, -0.939684391, 0, 1, -0, 0.939684391, 0, 0.342042685)
-       wait(.4) --Blazing Vortex Island
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(145.131607, 9372.39746, 90.3484344, 0.342042685, -0, -0.939684391, 0, 1, -0, 0.939684391, 0, 0.342042685)
-       wait(.5) --Trunda
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(145.131607, 17773.5469, 90.3484344, 0.342042685, -0, -0.939684391, 0, 1, -0, 0.939684391, 0, 0.342042685)
-       wait(.4) --SandStrom
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(145.131607, 13767.251, 90.3484344, 0.342042685, -0, -0.939684391, 0, 1, -0, 0.939684391, 0, 0.342042685)
-       wait(.4) --Enternel Island
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(138.522156, 5847.19336, 123.56015, 0.573598742, -0, -0.81913656, 0, 1, -0, 0.81913656, 0, 0.573598742)
-       wait(.7) --Space Island
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(184.796295, 4124.17773, 45.8520508, 0.499959469, 0, 0.866048813, 0, 1, 0, -0.866048813, 0, 0.499959469)
-       wait(.4) --Mystical Island
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(69, 766, -142)
+       wait(.00000001) --Enchanted Island
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(227, 2014, 265)
+       wait(.00000001) --AstralIsland
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(180, 4049, 51)
+       wait(.00000001) --ThunderStrom
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(139, 5657, 124)
+       wait(.00000001)--Blazing Vortex
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(145, 9285, 90)
+       wait(.00000001) --Ancient Inferno Island
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(145, 13680, 90)
+       wait(.00000001) --Midnight Shadow Island
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(145, 17686, 90)
+       wait(.00000001) --Mythical Souls Island
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(144, 28256, 88)
+       wait(.00000001) --WinterWonder Land
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(145, 24070, 90)
+       wait(.00000001) --Golden Master Island
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(144, 28256, 88)
+       wait(.00000001) --Dragon Legend Island
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(144, 33207, 88)
+       wait(.00000001) --CyberNetic Legend Island
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(144, 39317, 88)
+       wait(.00000001) --Skystrom Ultras
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(144, 46010, 88)
+       wait(.00000001) --Choas island
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(144, 52608, 88)
+       wait(.00000001) --Soul Fusion Island
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(144, 59594, 88)
+       wait(.00000001) --Dark Elements Island
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(144, 66669, 88)
+       wait(.00000001) --Inner peace island
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(144, 70271, 88)
+       wait(.00000001) --Blazing Vortex Island
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(144, 74443, 88)
+       wait(.00000001) --Trunda
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(144, 79747, 88)
+       wait(.00000001) --SandStrom
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(144, 83199, 88)
+       wait(.00000001) --Enternel Island
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(144, 87051, 88)
+       wait(.00000001) --Space Island
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(144, 91246, 88)
+       wait(.00000001) --Mystical Island
        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-0.346358001, 0.898000002, 70.1584854, 0.258864343, -0, -0.965913713, 0, 1, -0, 0.965913713, 0, 0.258864343) --spawn
 
 end    
 
 function chest ()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(46, 773, -187)
-wait(.5)
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(210, 4054, 61)
-wait(.5)
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(39, 5663, 60)
-wait(.5)
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(40, 9291, 58)
-wait(.5)
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(37, 17693, 60)
-wait(.5)
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(37, 28263, 50)
-wait(.5)
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(40, 24076, 58)
-wait(.5)
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(39, 13686, 58)
-wait(.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(45, 779, -186)
+wait(.1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(209, 4058, 60)
+wait(.1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(37, 5668, 59)
+wait(.1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(33, 9295, 57)
+wait(.1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(35, 13688, 57)
+wait(.1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(36, 17695, 58) 
+wait(.1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(36, 17697, 58)
+wait(.1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(35, 24080, 56)
+wait(.1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(35, 28265, 54)
+wait(.1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(521, 154, 368)
+wait(.1)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-0.346358001, 0.898000002, 70.1584854, 0.258864343, -0, -0.965913713, 0, 1, -0, 0.965913713, 0, 0.258864343)
 end
 
+function skillsbuy()
+   local args = {
+      [1] = "buyAllSkills",
+      [2] = "Blazing Vortex Island"
+  }
+  
+  game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))
+end  
+
+function shurkianbuy ()
+   
+   local args = {
+      [1] = "buyAllShurikens",
+      [2] = "Blazing Vortex Island"
+  }
+  
+  game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))
+  
+
+
+end
+
+local Tab = Window:CreateTab("Bosses") -- Title, Image
+local Section = Tab:CreateSection("Farms")
+local Toggle = Tab:CreateToggle({
+   Name = "Robot Farm",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   BossFarm = Value
+   while BossFarm == true do
+      local args = {
+         [1] = "swingKatana"
+     }
+     
+     game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(unpack(args))
+     wait()    
+     
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(476, 51, 144)
+wait(.001)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(469, 53, 113)
+wait(.001)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(501, 51, 101)
+wait(.001)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(501, 51, 101)
+wait(.001)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(429, 50, 110)
+wait(.011)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(478, 51, 52)
+end
+   end,
+})
