@@ -26,7 +26,7 @@ local Window = Rayfield:CreateWindow({
     }
  })
 --Tab
-local Tab = Window:CreateTab("Main", 4483362458) -- Title, Image
+local Tab = Window:CreateTab("Main") -- Title, Image
 --Section
 local Section = Tab:CreateSection("Player Stats")
 --toggle
@@ -38,7 +38,7 @@ local Toggle = Tab:CreateToggle({
     Inf_Money = Value
     while Inf_Money == true do      
         game:GetService("ReplicatedStorage").Remotes.generateBoost:FireServer("Coins", 480, 10000000)
-        wait()
+        task.wait()
     end
     end,
  })
@@ -52,7 +52,7 @@ local Toggle = Tab:CreateToggle({
     AutoRebirth = Value
     while AutoRebirth == true do      
         game:GetService("ReplicatedStorage").Remotes.rankUp:FireServer()
-        wait()
+        task.wait()
     end
     end,
  })
@@ -66,7 +66,7 @@ local Toggle = Tab:CreateToggle({
     Levels = Value
     while Levels == true do      
         game:GetService("ReplicatedStorage").Remotes.generateBoost:FireServer("Levels", 480, 10)
-        wait()
+        task.wait()
     end
     end,
  })
@@ -464,4 +464,3 @@ while Coins == true do
 end
 
 end)
-
