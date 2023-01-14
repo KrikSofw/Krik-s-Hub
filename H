@@ -2,8 +2,8 @@ local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shle
 --Window
 local Window = Rayfield:CreateWindow({
     Name = "Hotel Elephant Fucker By Krik#9388",
-    LoadingTitle = "Rayfield Interface Suite",
-    LoadingSubtitle = "by Sirius",
+    LoadingTitle = "Krik's Game Fucker",
+    LoadingSubtitle = "by Krik",
     ConfigurationSaving = {
        Enabled = true,
        FolderName = nil, -- Create a custom folder for your hub/game
@@ -22,12 +22,12 @@ local Window = Rayfield:CreateWindow({
        FileName = "SiriusKey",
        SaveKey = false,
        GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-       Key = "Hello"
+       Key = ""
     }
  })
 
  --Tab
- local Tab = Window:CreateTab("Main", 4483362458) -- Title, Image
+ local Tab = Window:CreateTab("Main") -- Title, Image
  --Section
  local Section = Tab:CreateSection("Player Stats")
  --Toggle
@@ -46,7 +46,7 @@ local Window = Rayfield:CreateWindow({
         }
         
         game:GetService("ReplicatedStorage").MoneyRequest:FireServer(unpack(args))
-        wait()
+        task.wait()
 
     end
     end,
@@ -60,8 +60,8 @@ local Window = Rayfield:CreateWindow({
 
  --Notify
  Rayfield:Notify({
-    Title = "Script Status",
-    Content = "Private",
+    Title = "Private",
+    Content = "Script Status",
     Duration = 6.5,
     Image = 4483362458,
     Actions = { -- Notification Buttons
