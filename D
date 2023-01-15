@@ -465,7 +465,7 @@ while CoinBoost == true do
     }
     
     game:GetService("ReplicatedStorage").Remotes.generateBoost:FireServer(unpack(args))
-wait()    
+task.wait()    
 
 end
 
@@ -482,7 +482,7 @@ while XPBoost == true do
     }
     
     game:GetService("ReplicatedStorage").Remotes.generateBoost:FireServer(unpack(args))
-    wait()
+    task.wait()
 
 end
 
@@ -497,7 +497,7 @@ while Extra_Speed == true do
     }
     
     game:GetService("ReplicatedStorage").Remotes.generateBoost:FireServer(unpack(args))
-    wait()
+    task.wait()
 
 
 end
@@ -522,7 +522,7 @@ while XPBoost == true do
     }
     
     game:GetService("ReplicatedStorage").Remotes.generateBoost:FireServer(unpack(args))
-    wait()
+    task.wait()
 end
 
 end)
@@ -539,7 +539,7 @@ while Super_Jump == true do
     }
     
     game:GetService("ReplicatedStorage").Remotes.generateBoost:FireServer(unpack(args))
-    wait()
+    task.wait()
 end
 
 end)
@@ -555,7 +555,7 @@ while Levels0 == true do
     }
     
     game:GetService("ReplicatedStorage").Remotes.generateBoost:FireServer(unpack(args))
-    wait()
+    task.wait()
 
 end
 
@@ -572,7 +572,7 @@ while Coins == true do
     }
     
     game:GetService("ReplicatedStorage").Remotes.generateBoost:FireServer(unpack(args))
-    wait()
+    task.wait()
 end
 
 end)
