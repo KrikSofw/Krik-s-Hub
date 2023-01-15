@@ -25,8 +25,37 @@ local Window = Rayfield:CreateWindow({
        Key = ""
     }
  })
+ 
 --Tab
 local Tab = Window:CreateTab("Main") -- Title, Image
+local Section = Tab:CreateSection("Misc")
+local Button = Tab:CreateButton({
+    Name = "Open Shop",
+    Callback = function()
+    shop()
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "Sell",
+    Callback = function()
+    sell()
+    task.wait(1)
+    come()
+    end,
+ })
+
+function shop()
+game.Players.LocalPlayer.Character.Humanoid.Jump = true
+task.wait(.1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-35.4998627, 2.5499289, -417.999847)
+task.wait(1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-35, 5, -458)
+end
+function sell()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-35.5002098, 2.55002689, -496.000031)
+    task.wait(.50)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-35, 5, -458)
+end
 --Section
 local Section = Tab:CreateSection("Player Stats")
 --toggle
@@ -241,23 +270,46 @@ local Toggle = Tab:CreateToggle({
  
 
 
-  Rayfield:Notify({
-    Title = "Script Status",
-    Content = "Private",
-    Duration = 6.5,
-    Image = 4483362458,
-    Actions = { -- Notification Buttons
-       Ignore = {
-          Name = "Okay!",
-          Callback = function()
-          print("The user tapped Okay!")
-       end
-    },
- },
+ local Tab = Window:CreateTab("Teleports")
+ local Dropdown = Tab:CreateDropdown({
+    Name = "Areas",
+    Options = {"RaceTrack","Trucks","Farm","Dock","SpaceStation","Emoji","Character","Nintendo","Rubik's Cube","Houses","MilteryBase","Pyramid","Castle","City","Towers","Volcano"},
+    CurrentOption = "None",
+    Flag = "Dropdown1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Option)
+   if Option == "RaceTrack" then
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(46, 4, -455)
+   elseif Option == "Trucks" then 
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-104, 4, -458)
+   elseif Option == "Farm" then 
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(34, 4, -156)
+   elseif Option == "SpaceStation" then 
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-106, 4, 132)
+   elseif Option == "Dock" then 
+    game.Players.LocalPlayer.Character.HumanoidRootPart = CFrame.new(30, 4, 144)
+   elseif Option == "Emoji" then 
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(43, 4, -748)
+   elseif Option == "Character" then 
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-109, 4, -757)
+   elseif Option == "Nintendo" then 
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(49, 4, -1059)
+   elseif Option == "Rubik's Cube" then 
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-106, 4, -1057)
+   elseif Option == "MilteryBase" then
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(32, 4, 444)
+   elseif Option == "Pyramid" then 
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-108, 4, 445)
+   elseif Option == "Castle" then 
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(32, 4, 720)
+   elseif Option == "City" then 
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-109, 4, 740)
+   elseif Option == "Towers" then 
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-108, 4, 1041)
+   elseif Option == "Volcano" then
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(37, 4, 1090)
+   end
+    end,
  })
-
-
-
 
 
 
