@@ -1,1 +1,10 @@
-
+if game.placeId== 3956818381 then --Ninja Legends
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/KrikSofw/Krik-s-Hub/main/N'))()
+elseif game.placeId == 23578803 then --Hotel Elphant
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/KrikSofw/Krik-s-Hub/main/H'))()
+elseif game.PlaceID == 2248408710 then --Destruction Simulator 
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/KrikSofw/Krik-s-Hub/main/D'))()
+elseif game.placeID == 2551991523 then --Broken Bones
+else
+    print("Game Not Supported")
+end
