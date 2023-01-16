@@ -20,9 +20,9 @@ local Window = Rayfield:CreateWindow({
        Subtitle = "The Key Is Nothing Hit Enter",
        Note = "Join the discord (discord.gg/sirius)",
        FileName = "SiriusKey",
-       SaveKey = false,
+       SaveKey = true,
        GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-       Key = ""
+       Key = "better"
     }
  })
  
