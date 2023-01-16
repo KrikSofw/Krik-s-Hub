@@ -6,3 +6,5 @@ Make String
 loadstring(game:HttpGet('https://raw.githubusercontent.com/KrikSofw/Krik-s-Hub/main/m'))()
 NinjaLegend
 loadstring(game:HttpGet('https://raw.githubusercontent.com/KrikSofw/Krik-s-Hub/main/N'))()
+MainHub
+loadstring(game:HttpGet('https://raw.githubusercontent.com/KrikSofw/Krik-s-Hub/main/Hub'))()
