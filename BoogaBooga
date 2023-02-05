@@ -115,7 +115,7 @@ getgenv().ErwinIsFruity = true
         Moyai = Value
         while ErwinIsFruity == true do
             
-            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1100, -206, -691)    
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1094, -208, -528)    
             task.wait()
 
         end
