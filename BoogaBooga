@@ -1,0 +1,107 @@
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
+
+local Window = Rayfield:CreateWindow({
+    Name = "Booga Bogga Teleport Bypass",
+    LoadingTitle = "Tp Hub",
+    LoadingSubtitle = "by Krik",
+    ConfigurationSaving = {
+       Enabled = true,
+       FolderName = nil, -- Create a custom folder for your hub/game
+       FileName = "Big Hub"
+    },
+    Discord = {
+       Enabled = false,
+       Invite = "SIRIUS", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD.
+       RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+    },
+    KeySystem = true, -- Set this to true to use our key system
+    KeySettings = {
+       Title = "Booga Bogga TP BYPASS",
+       Subtitle = "Go Crazy",
+       Note = "Private Script",
+       FileName = "SiriusKey",
+       SaveKey = false,
+       GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+       Key = ""
+    }
+ })
+
+ Rayfield:Notify({
+    Title = "Scripted By",
+    Content = "Krik#9388",
+    Duration = 6.5,
+    --Image = 4483362458,
+    Actions = { -- Notification Buttons
+       Ignore = {
+          Name = "Okay!",
+          Callback = function()
+          print("Enjoy Monkey")
+       end
+    },
+ },
+ })
+
+--Varabiles
+getgenv().SkyIsland1 = true
+getgenv().SkyIsland2 = true
+getgenv().Moyai = true
+
+ local ts = game:GetService("TweenService")
+ local info = TweenInfo.new(30,Enum.EasingStyle.Linear,Enum.EasingDirection.Out,0,false,.50)
+ 
+
+
+ local Tab = Window:CreateTab("Main Teleports") -- Title, Image
+
+ local Section = Tab:CreateSection("SkyIslands")
+ local Toggle = Tab:CreateToggle({
+    Name = "1",
+    CurrentValue = false,
+    Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+    SkyIsland1 = Value
+
+    while SkyIsland1 == true do
+        
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-453, 149, -616)    
+    task.wait()
+
+
+    end
+
+    end,
+ })
+
+ local Toggle = Tab:CreateToggle({
+    Name = "2",
+    CurrentValue = false,
+    Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+    SkyIsland2 = Value
+
+    while SkyIsland2 == true do
+        
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-527, 311, -1127)    
+    task.wait()
+
+
+    end
+
+    end,
+ })
+
+ local Section = Tab:CreateSection("Islands")
+ local Toggle = Tab:CreateToggle({
+    Name = "Moyai",
+    CurrentValue = false,
+    Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+        Moyai = Value
+        while Moyai == true do
+            
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1007, -3, -672)    
+            task.wait()
+
+        end
+    end,
+ })
