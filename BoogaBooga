@@ -45,6 +45,7 @@ local Window = Rayfield:CreateWindow({
 getgenv().SkyIsland1 = true
 getgenv().SkyIsland2 = true
 getgenv().Moyai = true
+getgenv().ErwinIsFruity = true
 
  local ts = game:GetService("TweenService")
  local info = TweenInfo.new(30,Enum.EasingStyle.Linear,Enum.EasingDirection.Out,0,false,.50)
@@ -100,6 +101,21 @@ getgenv().Moyai = true
         while Moyai == true do
             
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1007, -3, -672)    
+            task.wait()
+
+        end
+    end,
+ })
+
+ local Toggle = Tab:CreateToggle({
+    Name = "ErwinIsFruity",
+    CurrentValue = false,
+    Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+        Moyai = Value
+        while ErwinIsFruity == true do
+            
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1101, -206, -691)    
             task.wait()
 
         end
